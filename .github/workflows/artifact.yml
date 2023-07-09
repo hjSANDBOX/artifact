@@ -7,5 +7,11 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-      -name:
-      use:
+     - name: Check out the code
+       use: actions/checkout@v2
+     - name: Upload the artifact
+       use: actions/upload-artifact@v2
+       with:
+        name: ${{ env.ATRIFACT_NAME }}
+        path: .
+         
